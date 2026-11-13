@@ -9,7 +9,7 @@ frontend:
     build:
       commands:
         # Amplify console env vars are build-time only; write the form's ones where the Next server reads them at runtime.
-        - env | grep -E '^(RESEND_API_KEY|ENQUIRY_FROM|ENQUIRY_TO)=' >> .env.production || true
+        - env | grep -E '^(ENQUIRY_FROM|ENQUIRY_TO)=' >> .env.production || true
         - npm run build
   artifacts:
     baseDirectory: .next

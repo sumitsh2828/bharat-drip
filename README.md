@@ -32,15 +32,9 @@ grep -rn "\[" src/data src/app --include=*.ts --include=*.tsx | grep -v "\[slug\
 
 ## Quote forms
 
-The forms post to `src/app/api/enquiry/route.ts`. To send the enquiries by email, set these variables:
+The forms post to `src/app/api/enquiry/route.ts`, which sends the enquiry to info@bharatdrip.com through Amazon SES (ap-south-1). The domain bharatdrip.com is verified in SES, and the Amplify app's compute role `bharat-drip-amplify-compute` grants `ses:SendEmail`. To send to a different inbox or from a different address, set `ENQUIRY_TO` or `ENQUIRY_FROM`.
 
-```
-RESEND_API_KEY=re_xxx                         # from resend.com
-ENQUIRY_TO=info@bharatdrip.com               # inbox for enquiries
-ENQUIRY_FROM="Bharat Drip <quotes@bharatdrip.com>"   # a verified sender
-```
-
-If these aren't set, the form opens the visitor's own email app with the enquiry already filled in, so no request is lost. Every form also has a WhatsApp link that sends the same details to wa.me/14046606757.
+If the API route cannot be reached, the form opens the visitor's own email app with the enquiry already filled in, so no request is lost. Every form also has a WhatsApp link that sends the same details to wa.me/14046606757.
 
 ## Design tokens
 
