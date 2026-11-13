@@ -1,0 +1,21 @@
+version: 1
+frontend:
+  phases:
+    preBuild:
+      commands:
+        # Next 16 needs Node >= 20.9; the Amplify image defaults older.
+        - nvm use 22
+        - npm ci
+    build:
+      commands:
+        # Amplify console env vars are build-time only; write the form's ones where the Next server reads them at runtime.
+        - env | grep -E '^(RESEND_API_KEY|ENQUIRY_FROM|ENQUIRY_TO)=' >> .env.production || true
+        - npm run build
+  artifacts:
+    baseDirectory: .next
+    files:
+      - '**/*'
+  cache:
+    paths:
+      - .next/cache/**/*
+      - node_modules/**/*

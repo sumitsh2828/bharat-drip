@@ -1,26 +1,144 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+@theme {
+  /* Brand palette (from the design hand-off) */
+  --color-cream: #ece8d4; /* page */
+  --color-paper: #f7f5ec; /* cards */
+  --color-paper-2: #fbfaf4; /* inputs & chips */
+  --color-wheat: #efddb2; /* bands */
+  --color-sage: #6f9072;
+  --color-sage-tint: #dde3d3;
+  --color-gold: #ddb05e; /* buttons */
+  --color-gold-hover: #d2a24c;
+  --color-ochre: #a8853f;
+  --color-forest: #142418; /* text & dark bands */
+  --color-forest-2: #1c3021;
+  --color-forest-line: #34503a;
+  --color-forest-hover: #2a3f2e;
+  --color-ink: #2e3a30; /* body copy */
+  --color-muted: #5f5c4c;
+  --color-label: #7a5d22;
+  --color-line: #cfc8b0;
+  --color-mist: #a9b4a6;
+  --color-ph: #5a4416;
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --font-sans: "Inter Variable", Inter, system-ui, sans-serif;
+  --font-display: "Plus Jakarta Sans", "Inter Variable", Inter, system-ui, sans-serif;
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  /* Layout switches to mobile at 900px */
+  --breakpoint-nav: 900px;
+
+  --animate-fade-up: fade-up 0.6s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(12px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    background: var(--color-cream);
+    color: var(--color-forest);
+    font-family: var(--font-sans);
+    font-size: 16px;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: inherit;
+    transition: color 0.15s ease;
+  }
+  ::selection {
+    background: var(--color-gold);
+    color: var(--color-forest);
+  }
+  [id] {
+    scroll-margin-top: 24px;
+  }
+  a:focus-visible,
+  button:focus-visible,
+  input:focus-visible,
+  select:focus-visible,
+  textarea:focus-visible,
+  summary:focus-visible {
+    outline: 3px solid var(--color-gold);
+    outline-offset: 2px;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+/* Centered content column: 1240px max, fluid gutters */
+@utility wrap {
+  max-width: 1240px;
+  margin-inline: auto;
+  padding-inline: clamp(20px, 4.5vw, 64px);
+  box-sizing: content-box;
+}
+
+/* Small uppercase label above headings */
+@utility eyebrow {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  line-height: 1.5;
+}
+
+/* Dashed chip for facts still to be supplied, e.g. [standard] */
+@utility ph {
+  background: var(--color-wheat);
+  border: 1px dashed var(--color-ochre);
+  border-radius: 6px;
+  padding: 1px 6px;
+  color: var(--color-ph);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Shared form control look */
+@utility field {
+  width: 100%;
+  box-sizing: border-box;
+  min-height: 50px;
+  padding: 0 14px;
+  border-radius: 10px;
+  border: 1.5px solid var(--color-line);
+  background: var(--color-paper-2);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--color-forest);
+  transition:
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+  &::placeholder {
+    color: #77735f;
+  }
+  &:hover {
+    border-color: #b9b196;
+  }
+  &:focus {
+    border-color: var(--color-forest);
+  }
 }

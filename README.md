@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bharat Drip: website
 
-## Getting Started
+This is a Next.js (App Router) and Tailwind CSS v4 build of the Bharat Drip Irrigation & Agro website design.
 
-First, run the development server:
+## Run it
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+npm install
+npm run dev        # http://localhost:3000
+npm run build && npm start
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Pages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+| URL | File |
+| --- | --- |
+| `/` | `src/app/page.tsx` |
+| `/products` | `src/app/products/page.tsx` (data: `src/data/catalogue.ts`) |
+| `/products/<line>` (13 pages) | `src/app/products/[slug]/page.tsx` (data: `src/data/products/*.ts`) |
+| `/about` (`#quality`, `#export`) | `src/app/about/page.tsx` |
+| `/contact` | `src/app/contact/page.tsx` |
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Each product line page is built from one data file. You can edit the text, tables, packing details, related products and quote-form fields there without touching any markup.
 
-## Learn More
+## Placeholders
 
-To learn more about Next.js, take a look at the following resources:
+Any text in `[square brackets]` shows up as a dashed gold chip. It marks a fact the business still has to supply, such as an ISO certificate number, a lead time or a coil length. To find them all:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+grep -rn "\[" src/data src/app --include=*.ts --include=*.tsx | grep -v "\[slug\]"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Quote forms
 
-## Deploy on Vercel
+The forms post to `src/app/api/enquiry/route.ts`. To send the enquiries by email, set these variables:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```
+RESEND_API_KEY=re_xxx                         # from resend.com
+ENQUIRY_TO=aditi13020@gmail.com               # inbox for enquiries
+ENQUIRY_FROM="Bharat Drip <quotes@bharatdrip.com>"   # a verified sender
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+If these aren't set, the form opens the visitor's own email app with the enquiry already filled in, so no request is lost. Every form also has a WhatsApp link that sends the same details to wa.me/14046606757.
+
+## Design tokens
+
+The colours, fonts and the 900px mobile breakpoint (the `nav:` variant) are defined in `src/app/globals.css` under `@theme`. The fonts (Inter and Plus Jakarta Sans) are self-hosted through `@fontsource`, so the site makes no calls to Google Fonts.
