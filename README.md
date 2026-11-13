@@ -36,7 +36,7 @@ The forms post to `src/app/api/enquiry/route.ts`. To send the enquiries by email
 
 ```
 RESEND_API_KEY=re_xxx                         # from resend.com
-ENQUIRY_TO=aditi13020@gmail.com               # inbox for enquiries
+ENQUIRY_TO=info@bharatdrip.com               # inbox for enquiries
 ENQUIRY_FROM="Bharat Drip <quotes@bharatdrip.com>"   # a verified sender
 ```
 

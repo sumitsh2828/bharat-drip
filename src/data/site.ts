@@ -9,7 +9,7 @@ export const site = {
     number: "14046606757",
   },
   phone: { display: "+91 86195 62546", href: "tel:+918619562546" },
-  email: { display: "aditi13020@gmail.com", href: "mailto:aditi13020@gmail.com" },
+  email: { display: "info@bharatdrip.com", href: "mailto:info@bharatdrip.com" },
   address: "G-1 185, RIICO Industrial Area, Bindayaka, Neemera, Rajasthan 302041, India",
   mapsHref:
     "https://www.google.com/maps/search/?api=1&query=RIICO+Industrial+Area+Bindayaka+Rajasthan+302041",
