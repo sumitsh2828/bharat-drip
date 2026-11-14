@@ -8,7 +8,7 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "Product catalogue",
   description:
-    "Drip, sprinkler, piping and protected-farming products, all made for export. Every product, size and model number.",
+    "Drip, sprinkler and piping products, all made for export, in standard or custom sizes and under our brand or yours (OEM). Every product, size and model number.",
 };
 
 export default function ProductsPage() {
@@ -17,7 +17,7 @@ export default function ProductsPage() {
       <PageHero
         trail={[{ href: "/", label: "Home" }, { label: "Products" }]}
         title="Product catalogue"
-        lead="Drip, sprinkler, piping and protected-farming products, all made for export. Prices are quoted on request, since every order depends on size, quantity and destination."
+        lead="Drip, sprinkler and piping products, all made for export, in standard or custom sizes and under our brand or yours (OEM). Prices are quoted on request, since every order depends on size, quantity and destination."
       >
         <nav aria-label="Product lines" className="mt-2 flex flex-wrap gap-2">
           {catalogue.map((c) => (
@@ -95,10 +95,10 @@ export default function ProductsPage() {
           <div className="mt-6 flex flex-wrap items-center justify-between gap-6 rounded-[28px] bg-wheat p-[clamp(28px,4vw,48px)]">
             <div className="flex flex-[1_1_380px] flex-col gap-2.5">
               <h2 className="m-0 font-display text-[clamp(26px,3vw,36px)] leading-[1.08] font-extrabold tracking-[-0.02em] text-balance">
-                Need a size that isn’t listed?
+                Need a custom size or your own brand?
               </h2>
               <p className="m-0 max-w-[640px] text-lg leading-[1.6] text-ink text-pretty">
-                Most of our range can be made to your specification. Send us the details and we’ll confirm.
+                Most of our range can be made to your specification and supplied under your own brand as OEM. Send us the details and we’ll confirm.
               </p>
             </div>
             <div className="flex flex-wrap gap-3">

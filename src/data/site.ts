@@ -1,7 +1,7 @@
 export const site = {
   name: "Bharat Drip",
   legalName: "Bharat Drip Irrigation and Agro",
-  tagline: "Manufacturer & exporter of drip and sprinkler irrigation systems · since 2012",
+  tagline: "Manufacturer, exporter & OEM supplier of drip and sprinkler irrigation systems · since 2012",
   url: "https://bharatdrip.com",
   whatsapp: {
     display: "+1 404 660 6757",
@@ -10,10 +10,10 @@ export const site = {
   },
   phone: { display: "+91 86195 62546", href: "tel:+918619562546" },
   email: { display: "info@bharatdrip.com", href: "mailto:info@bharatdrip.com" },
-  address: "G-1 185, RIICO Industrial Area, Bindayaka, Neemera, Rajasthan 302041, India",
+  address: "G1-185, Road No. 10, RIICO Industrial Area, Bindayaka, Sirsi Road, Jaipur, Rajasthan 302012, India",
   mapsHref:
-    "https://www.google.com/maps/search/?api=1&query=RIICO+Industrial+Area+Bindayaka+Rajasthan+302041",
-  standards: "BIS IS 13487 · 13488 · 12786 · 14151 · 4985",
+    "https://www.google.com/maps/search/?api=1&query=G1-185+Road+No+10+RIICO+Industrial+Area+Bindayaka+Sirsi+Road+Jaipur+Rajasthan+302012",
+  standards: "BIS IS 4984 · 4985 · 12786 · 13487 · 13488 · 17425 · ISO 9001:2015",
 };
 
 export const mainNav = [
@@ -36,6 +36,7 @@ export const footerCompany = [
   { href: "/about", label: "About us" },
   { href: "/about#quality", label: "Quality & certifications" },
   { href: "/about#export", label: "Exports" },
+  { href: "/#oem", label: "Custom & OEM" },
   { href: "/contact", label: "Become a distributor" },
   { href: "/contact", label: "Request a quote" },
 ];

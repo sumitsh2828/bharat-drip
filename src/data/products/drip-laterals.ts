@@ -4,8 +4,8 @@ const dripLaterals: ProductPage = {
   slug: "drip-laterals",
   name: "Drip laterals",
   title: "Drip laterals",
-  lead: "Inline and online drip laterals in 12, 16 and 20 mm, made on our own lines in Rajasthan. Choose the wall thickness, flow rate and dripper spacing to suit the crop, the soil and how many seasons the line must last.",
-  standard: "Standard: BIS IS 13488 · Licence CML [number]",
+  lead: "Inline and online drip laterals in 12, 16 and 20 mm, made on our own lines in Rajasthan. Choose the wall thickness, flow rate and dripper spacing to suit the crop, the soil and how many seasons the line must last. Also available under your own brand (OEM).",
+  standard: "Standard: BIS IS 13488:2008 · Licence CM/L-0002524751",
   blocks: [
     {
       type: "features",
@@ -27,16 +27,16 @@ const dripLaterals: ProductPage = {
         ["Flow rate", "2 or 4 LPH", "2 or 4 LPH", "Set by dripper: 4–8 LPH"],
         ["Dripper spacing", "20–100 cm, in 10 cm steps", "20–100 cm, in 10 cm steps", "Any: punched on site"],
         ["Emitter", "Built in at the factory", "Built in at the factory", "BD-D online dripper"],
-        ["Coil length", "[metres]", "[metres]", "[metres]"],
+        ["Coil length", "12 mm: 400 m · 16 mm: 300 m", "12 mm: 600 m · 16 mm: 500 m · 20 mm: on request", "12 mm: 500 m · 16 mm: 300 m · 20 mm: on request"],
       ],
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[e.g. coils, shrink-wrapped]" },
-        { label: "Per 40′ container", value: "[coils / metres]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "Shrink-wrapped coils" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

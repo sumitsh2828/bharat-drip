@@ -29,15 +29,14 @@ const rainGuns: ProductPage = {
         ["BD-GS2", "Rain gun stand", "1½″"],
         ["BD-GS3", "Rain gun stand", "2″"],
       ],
-      note: "Throw radius and discharge for each gun and nozzle: [add from data sheet]",
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[boxed, stands bundled]" },
-        { label: "Per 40′ container", value: "[pieces]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

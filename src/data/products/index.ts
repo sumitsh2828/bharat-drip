@@ -10,8 +10,7 @@ import sprinklers from "./sprinklers";
 import rainGuns from "./rain-guns";
 import hdpePipes from "./hdpe-pipes";
 import pvcPipes from "./pvc-pipes";
-import greenhouses from "./greenhouses";
-import pondLining from "./pond-lining";
+import mulchFilm from "./mulch-film";
 
 export const productPages: ProductPage[] = [
   dripLaterals,
@@ -25,8 +24,7 @@ export const productPages: ProductPage[] = [
   rainGuns,
   hdpePipes,
   pvcPipes,
-  greenhouses,
-  pondLining,
+  mulchFilm,
 ];
 
 export function getProductPage(slug: string) {

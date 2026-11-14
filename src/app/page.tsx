@@ -7,9 +7,9 @@ import { site } from "@/data/site";
 
 const facts = [
   { title: "Since 2012", text: "Manufacturing irrigation systems in Rajasthan, India." },
-  { title: "BIS & ISO", text: "BIS-certified to IS 13487, 13488, 12786, 14151 and 4985. ISO [standard]" },
+  { title: "BIS & ISO", text: "Six BIS product licences and ISO 9001:2015 quality management." },
   { title: "Exporting", text: "To the Middle East, Sri Lanka, Nepal and Bhutan." },
-  { title: "Custom sizes", text: "Diameter, wall thickness and spacing made to your order." },
+  { title: "Custom & OEM", text: "Sizes made to your order, and products made under your own brand." },
 ];
 
 const featured: { slug: string; icon: IconName; title: string; text: string; spec: string }[] = [
@@ -23,10 +23,10 @@ const more: { slug: string; icon: IconName; title: string; text: string }[] = [
   { slug: "drippers", icon: "dripper", title: "Drippers", text: "Online drippers, 4–8 LPH" },
   { slug: "filters", icon: "filter", title: "Filters", text: "Screen, disc, hydrocyclone, sand · 2″–5″" },
   { slug: "fertigation", icon: "fertigation", title: "Fertigation", text: "Venturi injectors, 30–90 L tanks, headers" },
-  { slug: "valves", icon: "valve", title: "Valves & fittings", text: "Ball, air-release, flush and non-return valves" },
+  { slug: "valves", icon: "valve", title: "Valves & gauges", text: "Ball, air-release, flush and non-return valves" },
+  { slug: "drip-fittings", icon: "fittings", title: "Drip fittings", text: "Takeoffs, grommets, joiners, end caps, tees" },
   { slug: "sprinklers", icon: "sprinkler", title: "Sprinklers & rain guns", text: "Gun-metal, brass, plastic nozzles · 1¼″–3″ guns" },
-  { slug: "greenhouses", icon: "greenhouse", title: "Greenhouses & films", text: "Structures, poly and mulch film, nets" },
-  { slug: "pond-lining", icon: "pond", title: "Pond lining", text: "Farm pond liners, cut to size" },
+  { slug: "mulch-film", icon: "mulch", title: "Mulch film", text: "750–1200 mm rolls, 20–100 micron, or custom" },
 ];
 
 const system = [
@@ -38,11 +38,17 @@ const system = [
   { title: "To the plant", text: "Drippers, sprinklers and rain guns deliver each drop." },
 ];
 
+const oem: { icon: IconName; title: string; text: string }[] = [
+  { icon: "spec", title: "Your specification", text: "Sizes, wall thickness, pressure class, flow rate and spacing to suit your market." },
+  { icon: "tag", title: "Your brand", text: "Your name and logo on the packaging, and on the product itself where possible." },
+  { icon: "range", title: "Across the range", text: "Laterals, drippers, filters, fittings, sprinklers and pipes, made for your brand." },
+];
+
 const reasons = [
-  { title: "Quality you can check", text: "Product lines certified by BIS to IS 13487, 13488, 12786, 14151 and 4985, made under ISO [standard] quality management." },
+  { title: "Quality you can check", text: "Six BIS-licensed product lines (IS 4984, 4985, 12786, 13487, 13488, 17425), made under ISO 9001:2015 quality management." },
   { title: "Factory-direct pricing", text: "We make what we sell, so there is no trader’s margin in your price. Quotations on request." },
-  { title: "Custom sizes", text: "Wall thickness, dripper spacing, pipe class and raiser length made to your order." },
-  { title: "Quick dispatch", text: "Standard items from stock; made-to-order runs in [X] days." },
+  { title: "Custom sizes and OEM", text: "Wall thickness, spacing, pipe class and raiser length made to order, and products supplied under your own brand." },
+  { title: "Quick dispatch", text: "Standard items from stock; made-to-order runs in 7 days." },
   { title: "Support that answers", text: "Talk to our team directly on WhatsApp or phone, before and after your order." },
 ];
 
@@ -79,8 +85,8 @@ export default function HomePage() {
             </h1>
             <p className="m-0 max-w-[580px] text-[19px] leading-[1.6] text-ink text-pretty">
               We manufacture drip laterals, filters, fittings, sprinklers, HDPE and PVC pipes at our own factory in
-              Rajasthan, and ship them to distributors and large farms abroad. Certified quality, factory-direct pricing,
-              custom sizes and quick dispatch.
+              Rajasthan, and ship them to distributors and large farms abroad. Certified quality, factory-direct pricing
+              and quick dispatch, with custom sizes and OEM manufacturing under your own brand.
             </p>
             <div className="flex flex-wrap gap-3">
               <ButtonLink href="/contact" icon={<ArrowIcon />}>
@@ -263,6 +269,44 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* OEM */}
+      <section id="oem" aria-labelledby="oem-h" className="pt-[clamp(72px,8vw,112px)]">
+        <div className="wrap flex flex-wrap items-center gap-[clamp(32px,5vw,72px)]">
+          <div className="flex min-w-0 flex-[1_1_380px] flex-col gap-5">
+            <Eyebrow>OEM &amp; private label</Eyebrow>
+            <H2 id="oem-h">
+              Your brand
+              <br />
+              Made in our factory
+            </H2>
+            <Lead className="max-w-[520px]">
+              Distributors can sell our irrigation products under their own name. We manufacture to your specification and
+              supply it under your brand, from a single product line to a complete system.
+            </Lead>
+            <p className="m-0 text-[15px] text-muted">Minimum OEM order: one 20′ container</p>
+            <div className="flex flex-wrap gap-3">
+              <ButtonLink href="/contact" icon={<ArrowIcon />}>
+                Discuss an OEM order
+              </ButtonLink>
+              <ButtonLink href={site.whatsapp.href} variant="outline" icon={<WhatsAppIcon />}>
+                WhatsApp us
+              </ButtonLink>
+            </div>
+          </div>
+          <div className="grid min-w-0 flex-[1.3_1_480px] grid-cols-[repeat(auto-fit,minmax(min(200px,100%),1fr))] gap-3">
+            {oem.map((o) => (
+              <div key={o.title} className="flex flex-col gap-4 rounded-[22px] bg-paper p-[26px]">
+                <span className="flex size-[60px] items-center justify-center rounded-2xl bg-wheat">
+                  <ProductIcon name={o.icon} size={34} />
+                </span>
+                <p className="m-0 font-display text-xl leading-[1.25] font-extrabold">{o.title}</p>
+                <p className="m-0 text-[15px] leading-[1.6] text-ink">{o.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Why */}
       <section aria-labelledby="why-h" className="py-[clamp(72px,8vw,112px)]">
         <div className="wrap flex flex-wrap gap-[clamp(32px,5vw,80px)]">
@@ -328,7 +372,7 @@ export default function HomePage() {
               <div className="flex flex-col gap-2.5 border-t border-line pt-6">
                 <p className="m-0 font-semibold">Certifications</p>
                 <p className="m-0 text-[15px] leading-[1.8]">
-                  <Rich text="BIS: IS 13487, 13488, 12786, 14151, 4985 · ISO [standard & certificate no.]" />
+                  <Rich text="BIS: IS 4984, 4985, 12786, 13487, 13488, 17425 · ISO 9001:2015 (cert. QIBPLK1150)" />
                 </p>
               </div>
             </div>

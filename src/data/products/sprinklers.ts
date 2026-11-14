@@ -7,7 +7,7 @@ const sprinklers: ProductPage = {
   name: "Sprinkler systems",
   title: "Sprinkler systems",
   lead: "Portable sprinkler systems built on quick-coupled HDPE pipe: pipe from 50 to 200 mm, couplers and fittings from 50 to 110 mm, and nozzles in gun metal, brass or plastic.",
-  standard: "Standard: BIS IS 14151 (HDPE pipe)",
+  standard: "Standard: BIS IS 17425:2020 (quick-coupled pipes and fittings) · Licence CM/L-0002738467",
   blocks: [
     {
       type: "features",
@@ -35,15 +35,15 @@ const sprinklers: ProductPage = {
         ["BD-RR", "Rubber ring", s],
         ["BD-R", "Raiser", "Any size and length to order"],
       ],
-      note: "Throw radius and discharge for each nozzle: [add from data sheet] · HDPE pipe wall thickness by class is on the HDPE pipes page.",
+      note: "HDPE pipe wall thickness by class is on the HDPE pipes page.",
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[pipe lengths per bundle, fittings per carton]" },
-        { label: "Per 40′ container", value: "[sets / pipe lengths]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

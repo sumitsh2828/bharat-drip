@@ -5,7 +5,7 @@ const pvcPipes: ProductPage = {
   name: "PVC pipes",
   title: "PVC pipes",
   lead: "Rigid PVC pipes for mainlines and distribution, from 20 to 110 mm (½″ to 4″) in five pressure classes. The wall thickness for every size and class is below.",
-  standard: "Standard: BIS IS 4985 · Licence CML 84002504",
+  standard: "Standard: BIS IS 4985:2021 · Licence CM/L-8400002504",
   blocks: [
     {
       type: "table",
@@ -23,15 +23,15 @@ const pvcPipes: ProductPage = {
         ["90 mm", "3″", "1.3–1.7", "2.1–2.6", "3.1–3.7", "4.0–4.6", "5.0–5.7"],
         ["110 mm", "4″", "1.6–2.0", "2.5–3.0", "3.7–4.3", "4.9–5.6", "6.1–7.1"],
       ],
-      note: "— means that size is not made in that class. Length per pipe: [metres]",
+      note: "— means that size is not made in that class. Length per pipe: 6 m.",
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[lengths per bundle]" },
-        { label: "Per 40′ container", value: "[metres]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

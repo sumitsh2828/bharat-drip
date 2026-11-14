@@ -32,10 +32,10 @@ const dripFittings: ProductPage = {
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[pieces per bag / carton]" },
-        { label: "Per 40′ container", value: "[pieces]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

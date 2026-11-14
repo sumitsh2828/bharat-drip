@@ -17,7 +17,7 @@ export function SiteFooter() {
               <Wordmark dark size="lg" />
             </Link>
             <p className="m-0 max-w-[300px] text-[15px] leading-[1.6] text-mist">
-              Drip, sprinkler and pipe systems, manufactured in Rajasthan, India since 2012. Committed to a greener world.
+              Drip, sprinkler and pipe systems, manufactured in Rajasthan, India since 2012. Custom sizes and OEM manufacturing. Committed to a greener world.
             </p>
           </div>
 
@@ -73,7 +73,7 @@ export function SiteFooter() {
         <div className="flex flex-wrap justify-between gap-4 border-t border-forest-line pt-6 text-[13.5px] text-mist">
           <p className="m-0">© {new Date().getFullYear()} Bharat Drip Irrigation and Agro. All rights reserved.</p>
           <p className="m-0">
-            <Rich text={`bharatdrip.com · ${site.standards} · ISO [certificate no.]`} />
+            <Rich text={`bharatdrip.com · ${site.standards}`} />
           </p>
         </div>
       </div>

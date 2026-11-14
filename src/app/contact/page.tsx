@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import { Suspense } from "react";
 import { ContactForm, ContactFormFromQuery } from "@/components/forms";
 import { ArrowIcon, MailIcon, PhoneIcon, PinIcon, WhatsAppIcon } from "@/components/icons";
-import { ButtonLink, PageHero, Rich } from "@/components/ui";
+import { ButtonLink, PageHero } from "@/components/ui";
 import { site } from "@/data/site";
 
 export const metadata: Metadata = {
   title: "Request a quote",
   description:
-    "Tell us what you need and where it’s going. We reply with pricing, packing details and dispatch time by email or WhatsApp.",
+    "Tell us what you need and where it’s going. Standard, custom-size and OEM enquiries are all welcome. We reply with pricing, packing details and dispatch time by email or WhatsApp.",
 };
 
 export default function ContactPage() {
@@ -17,7 +17,7 @@ export default function ContactPage() {
       <PageHero
         trail={[{ href: "/", label: "Home" }, { label: "Request a quote" }]}
         title="Request a quote"
-        lead="Tell us what you need and where it’s going. We’ll reply with pricing, packing details and dispatch time by email or WhatsApp."
+        lead="Tell us what you need and where it’s going. Standard, custom-size and OEM enquiries are all welcome. We’ll reply with pricing, packing details and dispatch time by email or WhatsApp."
       />
 
       <div className="pb-[clamp(72px,8vw,112px)]">
@@ -47,7 +47,7 @@ export default function ContactPage() {
                 {site.phone.display}
               </a>
               <p className="m-0 text-[14.5px] text-muted">
-                <Rich text="India Standard Time (UTC+5:30), [working hours]" />
+                9 am to 9 pm India Standard Time (UTC+5:30)
               </p>
             </div>
 

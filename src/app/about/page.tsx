@@ -6,30 +6,31 @@ import { site } from "@/data/site";
 export const metadata: Metadata = {
   title: "About, quality & exports",
   description:
-    "Bharat Drip Irrigation and Agro has made drip and sprinkler irrigation systems in Rajasthan since 2012. BIS-certified product lines, exporting to the Middle East and South Asia.",
+    "Bharat Drip Irrigation and Agro has made drip and sprinkler irrigation systems in Rajasthan since 2012. Six BIS-licensed product lines, ISO 9001:2015, OEM supply, exporting to the Middle East and South Asia.",
 };
 
 const facts = [
   { label: "Founded", value: "2012" },
-  { label: "Factory", value: "RIICO Industrial Area, Bindayaka, Rajasthan" },
-  { label: "Production capacity", value: "[e.g. km of lateral per year]" },
+  { label: "Factory", value: "RIICO Industrial Area, Bindayaka, Jaipur" },
+  { label: "Production capacity", value: "150,000 metres per day" },
   { label: "Exporting to", value: "Middle East, Sri Lanka, Nepal, Bhutan" },
 ];
 
 const certs = [
-  { title: "Drip laterals", text: "BIS IS 13488 · CML [no.]" },
-  { title: "Drippers", text: "BIS IS 13487" },
-  { title: "Mini sprinkler laterals", text: "BIS IS 12786" },
-  { title: "HDPE pipes", text: "BIS IS 14151 · CML 2738467" },
-  { title: "PVC pipes", text: "BIS IS 4985 · CML 84002504" },
-  { title: "Quality management", text: "ISO [standard] · Cert. [no.]" },
+  { title: "Drip laterals", text: "BIS IS 13488:2008 · Licence", code: "CM/L-0002524751" },
+  { title: "Drippers (emitters)", text: "BIS IS 13487:2024 · Licence", code: "CM/L-0002623753" },
+  { title: "Mini sprinkler laterals", text: "BIS IS 12786:2024 · Licence", code: "CM/L-0002526654" },
+  { title: "Quick-coupled sprinkler pipes and fittings", text: "BIS IS 17425:2020 · Licence", code: "CM/L-0002738467" },
+  { title: "HDPE pipes for water supply", text: "BIS IS 4984:2016 · Licence", code: "CM/L-8400189615" },
+  { title: "uPVC pipes", text: "BIS IS 4985:2021 · Licence", code: "CM/L-8400002504" },
+  { title: "Quality management system", text: "ISO 9001:2015 · Certificate QIBPLK1150" },
 ];
 
 const ordering = [
   { title: "Send your requirement", text: "Products, sizes, quantity and destination port, by form, WhatsApp or email." },
   { title: "Receive a quotation", text: "Pricing, packing details and dispatch date for your order." },
-  { title: "Confirm the order", text: "Standard items ship from stock; custom sizes are made to order." },
-  { title: "Dispatch", text: "Packed for sea freight and shipped [FOB / CIF] from [port]." },
+  { title: "Confirm the order", text: "Standard items ship from stock; custom sizes and OEM orders are made to order." },
+  { title: "Dispatch", text: "Packed for sea freight. We quote Ex Factory, FOB or CIF, shipping from Mundra Port." },
 ];
 
 export default function AboutPage() {
@@ -38,7 +39,7 @@ export default function AboutPage() {
       <PageHero
         trail={[{ href: "/", label: "Home" }, { label: "About us" }]}
         title="Making irrigation systems in Rajasthan since 2012"
-        lead="Bharat Drip Irrigation and Agro has made drip and sprinkler irrigation systems since 2012. From our factory in the RIICO Industrial Area at Bindayaka, we supply distributors and large farms in India and abroad."
+        lead="Bharat Drip Irrigation and Agro has made drip and sprinkler irrigation systems since 2012. From our factory in the RIICO Industrial Area at Bindayaka, we supply distributors and large farms in India and abroad, under our own brand or theirs."
       />
 
       <section aria-label="Company facts" className="pb-[clamp(64px,7vw,96px)]">
@@ -61,7 +62,10 @@ export default function AboutPage() {
           <div className="flex max-w-[720px] flex-col gap-4">
             <Eyebrow>Quality</Eyebrow>
             <H2 id="ql-h">Certified to Indian and international standards</H2>
-            <Lead>Our main product lines carry BIS certification, and our processes follow ISO quality management.</Lead>
+            <Lead>
+              Six of our product lines are licensed by the Bureau of Indian Standards, and our quality management system is
+              certified to ISO 9001:2015.
+            </Lead>
           </div>
           <ul className="m-0 grid list-none grid-cols-[repeat(auto-fit,minmax(min(320px,100%),1fr))] gap-3 p-0">
             {certs.map((c) => (
@@ -72,7 +76,8 @@ export default function AboutPage() {
                 <div className="flex flex-col gap-1.5">
                   <p className="m-0 text-[16.5px] font-semibold">{c.title}</p>
                   <p className="m-0 text-[14.5px] leading-[1.8] text-ink">
-                    <Rich text={c.text} />
+                    {c.text}
+                    {"code" in c && <span className="block whitespace-nowrap">{c.code}</span>}
                   </p>
                 </div>
               </li>
@@ -92,14 +97,14 @@ export default function AboutPage() {
                 Now appointing distributors
               </H2>
               <Lead>
-                We ship irrigation systems to the Middle East, Sri Lanka, Nepal and Bhutan, and greenhouses to other Asian
-                countries. We are now appointing distributors in Europe, the United States and Africa.
+                We ship irrigation systems to the Middle East, Sri Lanka, Nepal and Bhutan. We are now appointing distributors in Europe, the United States and Africa.
               </Lead>
             </div>
             <div className="flex min-w-0 flex-[1_1_320px] flex-col gap-4 self-start rounded-3xl bg-forest p-7 text-cream">
               <p className="m-0 font-display text-[22px] leading-[1.25] font-extrabold">Become a Bharat Drip distributor</p>
               <p className="m-0 text-[15.5px] leading-[1.6] text-mist">
-                Tell us about your business and the region you cover. We’ll send the catalogue and distributor terms.
+                Tell us about your business and the region you cover. We’ll send the catalogue and distributor terms,
+                including OEM supply under your own brand.
               </p>
               <div className="flex flex-wrap gap-2.5">
                 <ButtonLink href="/contact?role=Distributor+or+dealer" icon={<ArrowIcon />}>

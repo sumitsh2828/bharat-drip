@@ -5,7 +5,7 @@ const hdpePipes: ProductPage = {
   name: "HDPE pipes",
   title: "HDPE pipes",
   lead: "HDPE pipes for mainlines and sprinkler systems, from 50 to 200 mm in four pressure classes. The wall thickness for every size and class is below.",
-  standard: "Standard: BIS IS 14151 · Licence CML 2738467",
+  standard: "Standard: BIS IS 17425:2020 (sprinkler pipe) · Licence CM/L-0002738467 · IS 4984:2016 (water-supply pipe) · Licence CM/L-8400189615",
   blocks: [
     {
       type: "table",
@@ -24,15 +24,15 @@ const hdpePipes: ProductPage = {
         ["180 mm", "4.4–5.0", "5.5–6.1", "6.9–7.8", "10.6–11.9"],
         ["200 mm", "4.9–5.6", "6.1–7.0", "7.7–8.7", "11.8–13.2"],
       ],
-      note: "— means that size is not made in that class. Length per pipe: [metres]",
+      note: "— means that size is not made in that class. Length per pipe: 6 m.",
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[lengths per bundle]" },
-        { label: "Per 40′ container", value: "[metres]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

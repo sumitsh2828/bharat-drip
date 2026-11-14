@@ -6,7 +6,7 @@ const drippers: ProductPage = {
   title: "Drippers",
   metaTitle: "Drippers",
   lead: "Online drippers that punch into plain laterals, so every plant gets an emitter exactly where it needs one. Use them with our online drip laterals in 12, 16 and 20 mm.",
-  standard: "Standard: BIS IS 13487",
+  standard: "Standard: BIS IS 13487:2024 · Licence CM/L-0002623753",
   blocks: [
     {
       type: "features",
@@ -24,17 +24,17 @@ const drippers: ProductPage = {
         ["Type", "Online, punched into the lateral"],
         ["Flow rate", "4–8 LPH"],
         ["Use with", "Online drip laterals, 12, 16 and 20 mm"],
-        ["Standard", "BIS IS 13487"],
-        ["Colour", "[colour]"],
+        ["Standard", "BIS IS 13487:2024 · Licence CM/L-0002623753"],
+        ["Colour", "Red and blue"],
       ],
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[pieces per bag / carton]" },
-        { label: "Per 40′ container", value: "[pieces]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "100 per packet" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {

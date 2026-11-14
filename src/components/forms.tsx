@@ -1,6 +1,6 @@
 "use client";
 
-import { useRef } from "react";
+import { Fragment, useRef } from "react";
 import { useSearchParams } from "next/navigation";
 import type { QuoteField, QuoteFieldRow } from "@/data/types";
 import { site } from "@/data/site";
@@ -66,6 +66,8 @@ const contactFields: QuoteField[] = [
   { id: "wa", label: "WhatsApp number", type: "tel" },
 ];
 
+const brandField: QuoteField = { id: "brand", label: "Brand", type: "select", options: ["Bharat Drip", "My own brand (OEM)"] };
+
 /* ------------------------------------------------------------------ */
 /* Status message                                                       */
 /* ------------------------------------------------------------------ */
@@ -128,7 +130,10 @@ export function ProductQuoteForm({
             ))}
           </div>
         ) : (
-          <Field key={row.id} field={row} />
+          <Fragment key={row.id}>
+            {row.id === "qty" && <Field field={brandField} />}
+            <Field field={row} />
+          </Fragment>
         ),
       )}
       {contactFields.map((f) => (
@@ -174,9 +179,9 @@ const products = [
   "Sprinklers & rain guns",
   "HDPE pipes",
   "PVC pipes",
-  "Greenhouses & films",
-  "Pond lining",
+  "Mulch film",
 ];
+const brands = ["Bharat Drip brand", "My own brand (OEM)", "Not sure yet"];
 
 const chip =
   "inline-flex min-h-11 cursor-pointer items-center gap-2.5 rounded-full border-[1.5px] border-line bg-paper-2 px-4 text-[15px] font-medium transition-colors hover:border-forest has-[:checked]:border-forest has-[:checked]:bg-sage-tint";
@@ -246,6 +251,18 @@ export function ContactForm({
                 className="m-0 size-[18px] accent-forest"
               />
               {p}
+            </label>
+          ))}
+        </div>
+      </fieldset>
+
+      <fieldset className="m-0 flex flex-col gap-3 border-0 p-0">
+        <legend className="mb-3 p-0 text-[14.5px] font-semibold">Branding</legend>
+        <div className="flex flex-wrap gap-2">
+          {brands.map((b) => (
+            <label key={b} className={chip}>
+              <input type="radio" name="brand" value={b} className="m-0 size-[18px] accent-forest" />
+              {b}
             </label>
           ))}
         </div>

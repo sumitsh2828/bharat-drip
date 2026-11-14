@@ -5,7 +5,7 @@ const miniSprinklers: ProductPage = {
   name: "Mini sprinkler systems",
   title: "Mini sprinkler systems",
   lead: "Mini sprinklers spread a fine, even spray over close-growing crops. We supply the 32 mm laterals, the nozzle, raiser and tube sets, and the fittings that connect them.",
-  standard: "Standard: BIS IS 12786 (32 mm laterals)",
+  standard: "Standard: BIS IS 12786:2024 (32 mm laterals) · Licence CM/L-0002526654",
   blocks: [
     {
       type: "features",
@@ -28,15 +28,14 @@ const miniSprinklers: ProductPage = {
         ["BD-SS", "Service saddle", "63 × 1″, 75 × 1″, 90 × 1″"],
         ["BD-BV", "PP ball valve", "20–200 mm"],
       ],
-      note: "Throw radius and discharge for each nozzle: [add from data sheet]",
     },
     {
       type: "packing",
       items: [
-        { label: "Packing", value: "[sets per carton, lateral coils]" },
-        { label: "Per 40′ container", value: "[sets / metres]" },
-        { label: "Lead time", value: "[X days from order]" },
-        { label: "Shipping terms", value: "[FOB / CIF, port]" },
+        { label: "Packing", value: "In pieces, as required" },
+        { label: "Per 40′ container", value: "Confirmed in your quotation" },
+        { label: "Lead time", value: "From stock, or 7 days if made to order" },
+        { label: "Shipping terms", value: "Ex Factory, FOB or CIF · Mundra Port" },
       ],
     },
     {
